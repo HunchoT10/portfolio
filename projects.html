@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects - Samuel</title>
+  <style>
+    /* Layout: sticky footer */
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f8faff;
+      color: #1a1a1a;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    main { flex: 1 0 auto; } /* pushes footer to bottom */
+
+    /* Navbar */
+    nav {
+      position: sticky;
+      top: 0;
+      background: #0d6efd;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+      z-index: 1000;
+    }
+    nav a {
+      color: white;
+      font-weight: bold;
+      transition: color 0.3s;
+      text-decoration: none;
+    }
+    nav a:hover { color: #dbeafe; }
+
+    /* Page sections */
+    section {
+      padding: 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+    h2 {
+      text-align: center;
+      margin: 1rem 0 1.5rem;
+      color: #0d6efd;
+      font-size: 2rem;
+    }
+    .intro-text {
+      text-align: center;
+      padding: 1rem;
+      max-width: 800px;
+      margin: auto;
+      color: #333;
+      font-size: 1.2rem;
+      line-height: 1.8;
+    }
+
+    /* Projects grid (2 per row, 1 on mobile) */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin-top: 2rem;
+      justify-items: center; /* centers items nicely */
+    }
+    @media (max-width: 700px) {
+      .projects-grid { grid-template-columns: 1fr; }
+    }
+
+    /* Project cards */
+    .project-box {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      width: 100%;
+    }
+    .project-box:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 20px rgba(0,0,0,0.15); /* subtle glow on hover */
+    }
+    .project-box a {
+      display: block;
+      outline: none;
+    }
+    .project-box a:focus-visible {
+      outline: 3px solid #0d6efd;
+      outline-offset: 4px;
+    }
+    .project-box img {
+      width: 100%;
+      height: 220px;       /* keeps rows even */
+      object-fit: cover;   /* crops nicely */
+    }
+
+    /* Footer (slimmer + sticks to bottom) */
+    footer {
+      background: #0d6efd;
+      color: white;
+      text-align: center;
+      padding: 0.75rem;   /* slim padding */
+      font-size: 0.85rem; /* smaller text */
+      flex-shrink: 0;
+    }
+    footer .links a {
+      color: white;
+      text-decoration: none;
+      margin: 0 0.5rem;
+      transition: color 0.3s;
+      font-size: 0.85rem; /* matches footer text */
+    }
+    footer .links a:hover { color: #dbeafe; }
+
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="projects.html" aria-current="page">Projects</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+
+  <main>
+    <section>
+      <h2>My Projects</h2>
+      <p class="intro-text">
+        Here’s a selection of projects I’ve worked on. Click on any preview to explore the live site.
+      </p>
+
+      <div class="projects-grid">
+        <div class="project-box">
+          <a href="https://tiretalent.com/" target="_blank" rel="noopener" aria-label="Open Tire Talent website in a new tab">
+            <img src="images/project1.png" alt="Tire Talent website preview" loading="lazy" />
+          </a>
+        </div>
+        <div class="project-box">
+          <a href="https://solarsesame.com/" target="_blank" rel="noopener" aria-label="Open Solar Sesame website in a new tab">
+            <img src="images/project2.png" alt="Solar Sesame website preview" loading="lazy" />
+          </a>
+        </div>
+        <div class="project-box">
+          <a href="https://cedarcrestchurch.com/" target="_blank" rel="noopener" aria-label="Open Cedarcrest Church website in a new tab">
+            <img src="images/project3.png" alt="Cedarcrest Church website preview" loading="lazy" />
+          </a>
+        </div>
+        <div class="project-box">
+          <a href="https://www.americasmattress.com/" target="_blank" rel="noopener" aria-label="Open America's Mattress website in a new tab">
+            <img src="images/project4.png" alt="America's Mattress website preview" loading="lazy" />
+          </a>
+        </div>
+        <div class="project-box">
+          <a href="https://kimgarst.com/" target="_blank" rel="noopener" aria-label="Open Kim Garst website in a new tab">
+            <img src="images/project5.png" alt="Kim Garst website preview" loading="lazy" />
+          </a>
+        </div>
+        <div class="project-box">
+          <a href="https://scrapeunlimitedleads.com/video" target="_blank" rel="noopener" aria-label="Open Scrape Unlimited Leads page in a new tab">
+            <img src="images/project6.png" alt="Scrape Unlimited Leads page preview" loading="lazy" />
+          </a>
+        </div>
+        <div class="project-box">
+          <a href="https://pra.insure/" target="_blank" rel="noopener" aria-label="Open PRA Insure website in a new tab">
+            <img src="images/project7.png" alt="PRA Insure website preview" loading="lazy" />
+          </a>
+        </div>
+        <div class="project-box">
+          <a href="https://www.resmarksystems.com/" target="_blank" rel="noopener" aria-label="Open Resmark Systems website in a new tab">
+            <img src="images/project8.png" alt="Resmark Systems website preview" loading="lazy" />
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>© 2025 Samuel. All rights reserved.</div>
+    <div class="links" aria-label="Social links">
+      <a href="#" aria-label="LinkedIn profile">LinkedIn</a> |
+      <a href="#" aria-label="GitHub profile">GitHub</a> |
+      <a href="#" aria-label="Twitter profile">Twitter</a>
+    </div>
+  </footer>
+
+</body>
+</html>
